@@ -18,17 +18,18 @@ return new class extends Migration
 
             config \ app.php \ 'timezone' da:'UTC' a: 'Europe/Rome'
         */
-        
+
         Schema::create('trains', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('agency');
+
+            $table->string('agency')->default('Treni Italia - Ferrovie dello Stato Italiane');
             $table->string('departure_station');
             $table->string('arrival_station');
             $table->time('departure_time');
             $table->time('arrival_time');
             $table->string('train_code');
-            $table->unsignedTinyInteger('carriages_number');
+            $table->unsignedTinyInteger('carriages_number')->nullable();
             $table->boolean('in_time');
             $table->boolean('deleted');
             /*
