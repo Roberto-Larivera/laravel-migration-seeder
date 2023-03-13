@@ -26,14 +26,15 @@ return new class extends Migration
             $table->string('agency')->default('Treni Italia - Ferrovie dello Stato Italiane');
             $table->string('departure_station');
             $table->string('arrival_station');
-            $table->time('departure_time');
-            $table->time('arrival_time');
             $table->date('departure_date');
+            $table->time('departure_time');
             $table->date('arrival_date');
+            $table->time('arrival_time');
             $table->string('train_code');
             $table->string('carriages_number')->nullable();
             $table->boolean('in_time');
             $table->boolean('deleted');
+            //$table->dateTime('datagiorno');
             /*
             Azienda
             Stazione di partenza
