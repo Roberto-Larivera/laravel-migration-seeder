@@ -1,7 +1,7 @@
 @extends('layout.app') {{-- estende in layout  --}}
 
 @section('head_title')
-    
+    Laravel Migration Seeder
 @endsection {{-- segnaposto dentro head  --}}
 
 @section('body_main')
