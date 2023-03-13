@@ -28,8 +28,10 @@ return new class extends Migration
             $table->string('arrival_station');
             $table->time('departure_time');
             $table->time('arrival_time');
+            $table->date('departure_date');
+            $table->date('arrival_date');
             $table->string('train_code');
-            $table->unsignedTinyInteger('carriages_number')->nullable();
+            $table->string('carriages_number')->nullable();
             $table->boolean('in_time');
             $table->boolean('deleted');
             /*
