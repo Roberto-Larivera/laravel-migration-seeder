@@ -25,3 +25,10 @@ Aggiungiamo un seeder per la classe Train usando FakerPHP.
 
 ## BONUS MILESTONE 3:
 Implementare il seeder un file csv.
+
+
+#### Appunti
+
+deve essere settato l'orario in quello europeo, roma = >>
+
+`config \ app.php \ 'timezone' da:'UTC' a: 'Europe/Rome'`
