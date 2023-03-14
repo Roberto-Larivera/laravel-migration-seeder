@@ -24,7 +24,7 @@ class TrainsTableSleeder extends Seeder
     {
         // php artisan db:seed --class=TrainsTableSleeder
 
-        for ($i = 0; $i < 100; $i++) {
+        for ($i = 0; $i < 500; $i++) {
             $newTrain = new Train;
             $newTrain->agency = $faker->company();
             $newTrain->departure_station = $faker->city();

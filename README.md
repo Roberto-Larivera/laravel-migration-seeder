@@ -29,14 +29,23 @@ Implementare il seeder un file csv.
 
 #### Appunti
 
-Bonus: Milestone 3:
+- Deve essere settato l'orario in quello europeo, roma = >>
 
-Il file per l'importazione dei dati si trova all'interno di:
+    - `config \ app.php \ 'timezone' da:'UTC' a: 'Europe/Rome'`
 
-public\csv\trains.csv
+- Bonus: Milestone 3:
 
+     - Il file per l'importazione dei dati si trova all'interno di: `public\csv\trains.csv`
 
-
-deve essere settato l'orario in quello europeo, roma = >>
-
-`config \ app.php \ 'timezone' da:'UTC' a: 'Europe/Rome'`
+    - Il processo di importazione del seeder in un database esistente è:
+        - Creare una Tabella tramite Migration
+            - `Database\migrations\2023_03_13_124150_create_trains_table.php`
+            - Far partire il comando: `php artisan migrate`
+            - Verificare la la coretta creazione della tabella nel database;
+        - Aprire PhpMyAdmin;
+        - Aprire la pagina importazione dentro la tabella
+        - Scegliere il file scv che si trova dentro: `public\csv\trains.csv`
+        - Andare alla sezione "Importazione parziale:" e modificare il paramenìtro "Salta questo numero di query (per SQL) partendo dalla prima:" in 1
+            - La modifica di questo parametro in 1 servirà a far saltare la riga dei campi di intestazione
+        - Cliccare su "Importa"
+        - Buon Lavoro!
