@@ -29,6 +29,14 @@ Implementare il seeder un file csv.
 
 #### Appunti
 
+Bonus: Milestone 3:
+
+Il file per l'importazione dei dati si trova all'interno di:
+
+public\csv\trains.csv
+
+
+
 deve essere settato l'orario in quello europeo, roma = >>
 
 `config \ app.php \ 'timezone' da:'UTC' a: 'Europe/Rome'`
